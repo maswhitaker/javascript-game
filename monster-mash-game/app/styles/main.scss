@@ -6,6 +6,14 @@
 $base-color: #3498db;
 $secondary-color: #27ae60;
 
+.display{
+  display: initial;
+}
+.hide{
+  display: none;
+}
+
+
 header{
   #char-select-container{
     width: 80%;
@@ -73,6 +81,7 @@ header{
 }
 
 #after-char-select{
+  display: none;
   div{
     width: 95%;
     height: 400px;
@@ -85,6 +94,76 @@ header{
     h1{
       font-size: 3em;
       padding-top: 100px;
+    }
+  }
+}
+#battle{
+  display: none;
+  height: 100%;
+  width :100%;
+  #monster-container{
+    position: absolute;
+      top: 0px;
+      right: 0px;
+    width: 25%;
+    height: 200px;
+    background-color: $secondary-color;
+    border-radius: 10px;
+    border: solid $base-color 5px;
+    div{
+      background-image: url(http://i.imgur.com/blIXOzm.png);
+      background-size: cover;
+      height: 90%;
+      width: 90%;
+      margin-right: 10px;
+      margin-left: 10px;
+      margin-bottom: 10px;
+      margin-top: 10px;
+    }
+  }
+  #char-container{
+    width: 25%;
+    height: 200px;
+    background-color: $secondary-color;
+    border-radius: 10px;
+    border: solid $base-color 5px;
+    position: absolute;
+      bottom: 200px;
+      left: 10px;
+    #character{
+      background-size: cover;
+      height: 90%;
+      width: 90%;
+      margin-right: 10px;
+      margin-left: 10px;
+      margin-bottom: 10px;
+      margin-top: 10px;
+    }
+  }
+  #menu{
+    width: 98%;
+    height: 200px;
+    background-color: $base-color;
+    border-radius: 5px;
+    border: solid $secondary-color 5px;
+    position: absolute;
+      bottom: 0px;
+    #left-menu{
+      float: left;
+      margin-right: 10px;
+      border:solid black 5px;
+      width: 50%;
+      height: 90%;
+      background-color: $secondary-color;
+    }
+    #inside-menu{
+      float: right;
+      margin-top: 10px;
+      margin-right: 10px;
+      border: solid black 5px;
+      width: 40%;
+      height: 90%;
+      background-color: white;
     }
   }
 }
