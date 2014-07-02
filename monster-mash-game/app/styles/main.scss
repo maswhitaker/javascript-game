@@ -1,3 +1,90 @@
 @import "../bower_components/bourbon/dist/bourbon";
 
 * { @include box-sizing(border-box); }
+
+/* Variables */
+$base-color: #3498db;
+$secondary-color: #27ae60;
+
+header{
+  #char-select-container{
+    width: 80%;
+    height: 100px;
+    background-color: $base-color;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    h1{
+      text-align: center;
+      font-family: Arial;
+      color: white;
+      font-size: 40px;
+      padding-top: 25px;
+    }
+  }
+  h1{
+    text-align: center;
+    font-family: Arial;
+  }
+  #char-img-container{
+    margin-top: 100px;
+    height: 300px;
+    width: 100%;
+    background-color: $base-color;
+    border-radius: 10px;
+    border: solid $secondary-color 5px;
+    #img1{
+      float: left;
+      width: 25%;
+      height: 75%;
+      background-color: white;
+      margin-top: 4%;
+      margin-left: 4%;
+      margin-right: 4%;
+      margin-bottom: 4%;
+      background-image: url(http://i.imgur.com/0EAICgx.gif);
+      background-size: cover;
+    }
+    #img2{
+      float: left;
+      width: 25%;
+      height: 75%;
+      background-color: white;
+      margin-top: 4%;
+      margin-left: 4%;
+      margin-right: 4%;
+      margin-bottom: 4%;
+      background-image: url(http://i.imgur.com/l48Eqhu.jpg);
+      background-size: cover;
+    }
+    #img3{
+      float: left;
+      width: 25%;
+      height: 75%;
+      background-color: white;
+      margin-top: 4%;
+      margin-left: 4%;
+      margin-right: 4%;
+      margin-bottom: 4%;
+      background-image: url(http://i.imgur.com/qAzglNT.jpg);
+      background-size: cover;
+    }
+  }
+}
+
+#after-char-select{
+  div{
+    width: 95%;
+    height: 400px;
+    background-color: $base-color;
+    border-radius: 30px;
+    color: white;
+    border: solid $secondary-color 5px;
+    margin-left: auto;
+    margin-right: auto;
+    h1{
+      font-size: 3em;
+      padding-top: 100px;
+    }
+  }
+}
