@@ -5,6 +5,9 @@
 /* Variables */
 $base-color: #3498db;
 $secondary-color: #27ae60;
+$first-font: Audiowide;
+$second-font: Dosis;
+
 
 .display{
   display: initial;
@@ -24,7 +27,7 @@ header{
     border-radius: 10px;
     h1{
       text-align: center;
-      font-family: Arial;
+      font-family: $first-font;
       color: white;
       font-size: 40px;
       padding-top: 25px;
@@ -32,7 +35,7 @@ header{
   }
   h1{
     text-align: center;
-    font-family: Arial;
+    font-family: $first-font;
   }
   #char-img-container{
     margin-top: 100px;
@@ -45,6 +48,7 @@ header{
       float: left;
       width: 25%;
       height: 75%;
+      opacity: .6;
       background-color: white;
       margin-top: 4%;
       margin-left: 4%;
@@ -52,11 +56,17 @@ header{
       margin-bottom: 4%;
       background-image: url(http://i.imgur.com/0EAICgx.gif);
       background-size: cover;
+      transition: 1s ease-in;
+      &:hover{
+        height: 80%;
+        opacity: 1;
+      }
     }
     #img2{
       float: left;
       width: 25%;
       height: 75%;
+      opacity: .6;
       background-color: white;
       margin-top: 4%;
       margin-left: 4%;
@@ -64,11 +74,17 @@ header{
       margin-bottom: 4%;
       background-image: url(http://i.imgur.com/l48Eqhu.jpg);
       background-size: cover;
+      transition: 1s ease-in;
+      &:hover{
+        height: 80%;
+        opacity: 1;
+      }
     }
     #img3{
       float: left;
       width: 25%;
       height: 75%;
+      opacity: .6;
       background-color: white;
       margin-top: 4%;
       margin-left: 4%;
@@ -76,6 +92,11 @@ header{
       margin-bottom: 4%;
       background-image: url(http://i.imgur.com/qAzglNT.jpg);
       background-size: cover;
+      transition: 1s ease-in;
+      &:hover{
+        height: 80%;
+        opacity: 1;
+      }
     }
   }
 }
@@ -91,6 +112,10 @@ header{
     border: solid $secondary-color 5px;
     margin-left: auto;
     margin-right: auto;
+    transition: 1s ease-in;
+    &:hover{
+      color: red;
+    }
     h1{
       font-size: 3em;
       padding-top: 100px;
@@ -120,6 +145,15 @@ header{
       margin-bottom: 10px;
       margin-top: 10px;
     }
+    h1{
+      font-family: $first-font;
+    }
+  }
+  #char-name{
+    position:absolute;
+      top: 200px;
+    font-family: $first-font;
+    font-size: 1.5em;
   }
   #char-container{
     width: 25%;
@@ -150,11 +184,23 @@ header{
       bottom: 0px;
     #left-menu{
       float: left;
-      margin-right: 10px;
+      margin-left: 10px;
+      margin-top: 10px;
       border:solid black 5px;
       width: 50%;
       height: 90%;
       background-color: $secondary-color;
+      h1{
+        padding-left: 10px;
+        font-size: 30px;
+        font-family: $first-font;
+        text-align: center;
+      }
+      p{
+        padding-left: 10px;
+        font-family: $second-font;
+        text-align: center;
+      }
     }
     #inside-menu{
       float: right;
@@ -164,6 +210,16 @@ header{
       width: 40%;
       height: 90%;
       background-color: white;
+      p{
+        font-family: $first-font;
+        font-size: 20px;
+        text-align: center;
+        transition: 1s ease-in;
+        &:hover{
+          color: red;
+          font-size: 25px;
+        }
+      }
     }
   }
 }

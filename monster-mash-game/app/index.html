@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <title>Monster Mash Game</title>
         <meta name="description" content="">
+        <link href='http://fonts.googleapis.com/css?family=Dosis:400,700|Audiowide' rel='stylesheet' type='text/css'>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
@@ -55,7 +56,12 @@
           <div id="monster-container">
             <div>
             </div>
+            <h1>Remaining Health:</h1>
+            <script type="text/template" id="info">
+              <p id="monster-health"><%= health %></p>
+            </script>
           </div>
+          <h1 id="char-name"></h1>
           <div id="char-container">
             <div id="character">
             </div>
@@ -64,10 +70,11 @@
             <div id="left-menu">
               <h1>Remaining Health</h1>
               <p>___</p>
+
               <p>100</p>
             </div>
             <div id="inside-menu">
-              <p>Fight</p>
+              <p id="fightFunction">Fight</p>
               <p>Run Away</p>
             </div>
           </div>
