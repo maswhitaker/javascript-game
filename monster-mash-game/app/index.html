@@ -53,30 +53,35 @@
         </section>
 
         <section id="battle">
-          <div id="monster-container">
-            <div>
+          <div id="background">
+            <div id="monster-container">
+              <div>
+              </div>
+              <h1>Remaining Health:</h1>
+              <p id="monster-health"></p>
             </div>
-            <h1>Remaining Health:</h1>
-            <script type="text/template" id="info">
-              <p id="monster-health"><%= health %></p>
-            </script>
+            <h1 id="char-name"></h1>
+            <div id="char-container">
+              <div id="character">
+              </div>
+            </div>
+            <div id="menu">
+              <div id="left-menu">
+                <h1>Remaining Health</h1>
+                <p id="dino-health"></p>
+                <p>___</p>
+                <p>100</p>
+              </div>
+              <div id="inside-menu">
+                <p id="fightFunction">Fight</p>
+                <p>Run Away</p>
+              </div>
+            </div>
           </div>
-          <h1 id="char-name"></h1>
-          <div id="char-container">
-            <div id="character">
-            </div>
-          </div>
-          <div id="menu">
-            <div id="left-menu">
-              <h1>Remaining Health</h1>
-              <p>___</p>
-
-              <p>100</p>
-            </div>
-            <div id="inside-menu">
-              <p id="fightFunction">Fight</p>
-              <p>Run Away</p>
-            </div>
+        </section>
+        <section id="victoryPage">
+          <div>
+            <h1>Congratulations! You have defeated the monster</h1>
           </div>
         </section>
 
