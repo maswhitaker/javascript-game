@@ -11,7 +11,32 @@ function Player(options){
   this.attack = function(monsta){
     return monsta.health = monsta.health - (Math.floor(Math.random() * 10));
   };
+  this.select = function(dino,image, backgroundimage){
+    $('#character').css('background-image','url('+ image +')');
+    $('header').css('display', 'none');
+    $('#after-char-select').css('display','initial');
+    $('#char-name').html(dino.name);
+    $('#background').css('background-image','url('+ backgroundimage +')');
+  };
+  this.startBattle = function(dino,monster){
+    dino.attack(monster);
+    $('#monster-health').html(monster.health);
+    setInterval(function(){
+      monster.fight(dino);
+    },100);
+    $('#dino-health').html(dino.health);
+    if(monster.health < 0){
+      $('#battle').css('display','none');
+      $('#victoryPage').css('display','initial');
+      $('#score').html(dino.health);
+    }
+    if(dino.health < 0){
+      $('#battle').css('display','none');
+      $('#lostPage').css('display','intial');
+    }
+  };
 };
+
 function Monster(options){
   this.health = options.health;
   this.name = options.name;
@@ -62,34 +87,6 @@ image3 = "images/images.duckduckgo-1.jpg"
 backgroundImage1 = "images/dino-background-1.jpg"
 backgroundImage2 = "images/dino-background-2.jpg"
 backgroundImage3 = "images/dino-background-3.jpg"
-
-
-//Select character and add dino1background + dino1 image + dino1 name to battle scene
-$('#img1').click(function(){
-  $('#character').css('background-image','url('+ image1 +')');
-  $('header').css('display', 'none');
-  $('#after-char-select').css('display','initial');
-  $('#char-name').html(dino1.name);
-  $('#background').css('background-image','url('+ backgroundImage1 +')');
-});
-
-//Select character and add dino2background + dino2 image + dino2 name to battle scene
-$('#img2').click(function(){
-  $('#character').css('background-image','url('+ image2 +')');
-  $('header').css('display', 'none');
-  $('#after-char-select').css('display','initial');
-  $('#char-name').html(dino2.name);
-  $('#background').css('background-image','url('+ backgroundImage2 +')');
-});
-
-//Select character and add dino3background + dino3 image + dino3 name to battle scene
-$('#img3').click(function(){
-  $('#character').css('background-image','url('+ image3 +')');
-  $('header').css('display', 'none');
-  $('#after-char-select').css('display','initial');
-  $('#char-name').html(dino3.name);
-  $('#background').css('background-image','url('+ backgroundImage3 +')');
-});
 
 // After selecting character message
 $('#after-char-select').click(function(){
@@ -162,4 +159,14 @@ $('#fightFunction').click(function(){
 
 $('#newCharSelect').click(function(){
  open('http://localhost:9000')
+});
+
+$('#img1').click(function(){
+  dino1.select(dino1,image1,backgroundImage1);
+});
+$('#img2').click(function(){
+  dino2.select(dino2,image2,backgroundImage2);
+});
+$('#img3').click(function(){
+  dino3.select(dino3,image3,backgroundImage3);
 });
