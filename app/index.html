@@ -1,0 +1,106 @@
+<!doctype html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <title>Monster Mash Game</title>
+        <meta name="description" content="">
+        <link href='http://fonts.googleapis.com/css?family=Dosis:400,700|Audiowide' rel='stylesheet' type='text/css'>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <!-- build:css styles/vendor.css -->
+        <!-- bower:css -->
+        <link rel="stylesheet" href="bower_components/fontawesome/css/font-awesome.css" />
+        <!-- endbower -->
+        <!-- endbuild -->
+
+        <!-- build:css styles/main.css -->
+        <link rel="stylesheet" href="styles/main.css">
+        <!-- endbuild -->
+
+        <!-- build:js scripts/vendor/modernizr.js -->
+        <script src="bower_components/modernizr/modernizr.js"></script>
+        <!-- endbuild -->
+    </head>
+    <body>
+        <!--[if lt IE 10]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- THIS IS JUST SOME EXAMPLE CODE TO RELATE BACK TO OUR MAIN.JS FILE.
+        YOU'LL NEED TO START YOUR GAME WITH THE ABILITY TO SELECT BETWEEN PLAYERS.
+            <div class="container">
+                <div class="purple-people-eater"></div>
+                <div class="tina-fey"></div>
+            </div>
+        </div> -->
+        <header>
+          <div id="char-select-container">
+            <h1>Character Selection</h1>
+          </div>
+          <h1>Choose your favorite dino :)</h1>
+          <div id="char-img-container">
+            <span id="img1"></span>
+            <span id="img2"></span>
+            <span id="img3"></span>
+          </div>
+        </header>
+
+        <section id="after-char-select">
+          <div>
+            <h2>Rules: Click "Fight" as fast as you can to defeat the evil monster.</h2>
+            <h1>Click to Initiate Battle vs. Monster #1</h1>
+          </div>
+        </section>
+
+        <section id="battle">
+          <div id="background">
+            <div id="monster-container">
+              <div>
+              </div>
+              <h1>Remaining Health:</h1>
+              <p id="monster-health"></p>
+            </div>
+            <h1 id="char-name"></h1>
+            <div id="char-container">
+              <div id="character">
+              </div>
+            </div>
+            <div id="menu">
+              <div id="left-menu">
+                <h1>Remaining Health</h1>
+                <p id="dino-health"></p>
+              </div>
+              <div id="inside-menu">
+                <div>
+                  <p id="fightFunction">Fight</p>
+                  <p id="newCharSelect">Choose new character</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="victoryPage">
+          <div>
+            <h1>Congratulations! You have defeated the monster. Your score was:</h1>
+            <h2 id="score"></h2>
+          </div>
+        </section>
+        <section id="lostPage">
+          <div id="replay">
+            <h1>YOU LOST!</h1>
+          </div>
+        </section>
+
+        <!-- build:js scripts/vendor.js -->
+        <!-- bower:js -->
+        <script src="bower_components/jquery/dist/jquery.js"></script>
+        <script src="bower_components/underscore/underscore.js"></script>
+        <!-- endbower -->
+        <!-- endbuild -->
+
+        <!-- build:js scripts/main.js -->
+        <script src="scripts/main.js"></script>
+        <!-- endbuild -->
+    </body>
+</html>
