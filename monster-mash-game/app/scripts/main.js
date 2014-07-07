@@ -159,7 +159,9 @@ $('#fightFunction').click(function(){
     $('#lostPage').css('display','initial');
   }
 });
-
-$('replay').click(function(){
-  window.location.reload();
-});
+//
+// $('#newCharSelect').click(function(){
+//   $('#header').css('display','initial');
+//   $('#battle').css('display','none');
+//   $('#after-char-select').css('display','none');
+// });
