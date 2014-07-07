@@ -16,6 +16,9 @@ $second-font: Dosis;
   display: none;
 }
 
+body{
+  background-image: linear-gradient(to top, lightblue,lightgreen);
+}
 
 header{
   #char-select-container{
@@ -156,6 +159,7 @@ header{
       }
       h1{
         font-family: $first-font;
+        color: white;
       }
       #monster-health{
         font-family: $second-font;
@@ -168,6 +172,7 @@ header{
         top: 200px;
       font-family: $first-font;
       font-size: 1.5em;
+      color: white;
     }
     #char-container{
       width: 25%;
@@ -224,14 +229,23 @@ header{
         width: 40%;
         height: 90%;
         background-color: white;
-        p{
-          font-family: $first-font;
-          font-size: 20px;
-          text-align: center;
-          transition: 1s ease-in;
-          &:hover{
-            color: red;
-            font-size: 25px;
+        div{
+          height: 60px;
+          width: 100px;
+          background-color: grey;
+          margin-left: auto;
+          margin-right: auto;
+          border-radius: 20px;
+          p{
+            font-family: $first-font;
+            font-size: 20px;
+            text-align: center;
+            padding: 10px 10px 10px 10px;
+            transition: 1s ease-in;
+            &:hover{
+              color: red;
+              font-size: 25px;
+            }
           }
         }
       }
@@ -251,5 +265,29 @@ header{
       font-family: $second-font;
       font-size: 40px;
     }
+    h2{
+      text-align: center;
+      font-size: 50px;
+      font-family: $first-font;
+    }
+  }
+}
+#lostPage{
+  display: none;
+  height:800px;
+  width: 100%;
+  div{
+    width: 100%;
+    background-color: red;
+    border-radius: 5px;
+    border: solid darkred 5px;
+    text-align: center;
+    h1{
+      font-family: $second-font;
+      font-size: 50px;
+    }
+  }
+  h2{
+    text-align: center;
   }
 }
