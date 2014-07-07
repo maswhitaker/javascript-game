@@ -9,14 +9,14 @@ function Player(options){
   this.name = options.name;
   this.health = options.health;
   this.attack = function(monsta){
-    return monsta.health = monsta.health - (Math.random() * 10);
+    return monsta.health = monsta.health - (Math.floor(Math.random() * 10));
   };
 };
 function Monster(options){
   this.health = options.health;
   this.name = options.name;
   this.fight = function(player){
-    return player.health = player.health - (Math.random() * 8);
+    return player.health = player.health - (Math.floor(Math.random() * 8));
   };
 };
 
@@ -159,9 +159,7 @@ $('#fightFunction').click(function(){
     $('#lostPage').css('display','initial');
   }
 });
-//
-// $('#newCharSelect').click(function(){
-//   $('#header').css('display','initial');
-//   $('#battle').css('display','none');
-//   $('#after-char-select').css('display','none');
-// });
+
+$('#newCharSelect').click(function(){
+ open('http://localhost:9000')
+});
